@@ -10,7 +10,7 @@ form {border: 3px solid #f1f1f1;}
     margin: 0 auto;
     padding: 20px;
 }
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email], select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -84,29 +84,30 @@ span.psw {
     <label for="uname"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname" required>
     
-    <label for="email"><b>email</b></label>
-    <input type="email" placeholder="Enter email" name="email" required>
+    <label for="email"><b>Email</b></label>
+    <input type="email" placeholder="Enter Email" name="email" required>
     
-    <label for="type">Choose user type:</label>
-
-  <select name="type" id="type">
-  <option value="indvididual">indvididual</option>
-  <option value="artist">artist</option>
-  <option value="organisation">organisation</option>
-  </select>
-  <br>
-  <label for="phone"><b>PHONE NUMBER</b></label>
-    <input type="text" placeholder="Enter phone number" name="phone" required>
-    <label for="psw" style="display:block;"><b>Password</b></label>
+    <label for="type"><b>Choose user type:</b></label>
+    <select name="type" id="type">
+      <option value="individual">Individual</option>
+      <option value="artist">Artist</option>
+      <option value="organisation">Organisation</option>
+    </select>
+    
+    <label for="phone"><b>Phone Number</b></label>
+    <input type="text" placeholder="Enter Phone Number" name="phone" required>
+    
+    <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
         
     <label for="psw2"><b>Re-Password</b></label>
     <input type="password" placeholder="Re-Enter Password" name="psw2" required>
-    <button type="submit">signup</button>
+    
+    <button type="submit">Signup</button>
   </div>
 
   <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
+    <a href="{%url 'home' %}"><button type="button" class="cancelbtn">Cancel</button></a>
     <span class="psw">Forgot <a href="#">password?</a></span>
   </div>
 </form>

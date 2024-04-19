@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import get_user_model,authenticate,login,logout
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpResponseRedirect
 
 User = get_user_model()
 
@@ -33,7 +33,14 @@ def login_view(request):
         user = authenticate(request, username=uname, password=pass1)
         if user is not None:
             login(request, user)
-            return redirect('home')
+            if user.is_superuser:
+                return HttpResponseRedirect("/admin")
+            if user.is_staff:
+                return HttpResponseRedirect("/seller_dashboard")
+            # if user.is_active:
+            #     return HttpResponseRedirect("/custom_dashboard")
+            else:
+                return redirect('home')
         else:
             return HttpResponse("Your password and confirm password mismatched")
             

@@ -28,6 +28,17 @@
                 <a href="{% url 'login_view' %}" class="navigators login">login</a>
                 <img src="{% static 'assets/modes/light_mode_FILL0_wght400_GRAD0_opsz48.svg' %}" alt="" class="themeMode">
                 <img src="{% static 'assets/logos/harmburger.svg' %}" alt="" class="hamburger sidebarbtns" onclick="openSideBar()">
+                <img src="{% static 'assets/person.svg'%}"  alt="Profile Icon" class="profile-icon" onclick="toggleDiv('profile-logo')">
+                <div class="profile-logo" id ="profile-logo">
+                    <div class="profile-info">
+                        <p>Welcome, <span id="username" value="">Name</span></p>
+                        <button id="logout-btn">Logout</button>
+                        <button id="logout-btn">settings</button>
+
+                    </div>
+
+                </div>
+                
             </nav>
             <div class="homeContent">
               
@@ -85,6 +96,16 @@
             </div>
         </div>
     </footer>
+    <script>
+        function toggleDiv(divId) {
+            var div = document.getElementById(divId);
+            if (div.style.display === "none") {
+                div.style.display = "block";
+            } else {
+                div.style.display = "none";
+            }
+        }
+    </script>
 </body>
 
 </html>

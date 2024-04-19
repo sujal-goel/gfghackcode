@@ -7,7 +7,7 @@ class customuser(AbstractUser):
     phone=models.CharField(max_length=100,default="",blank=True)
     user_type= models.CharField(max_length=30)
     user_bio=models.CharField(max_length=200)
-    user_profile_image=models.ImageField(upload_to="profile")
+    user_profile_image=models.ImageField(upload_to='static/user_images', default='static/user_images/person.svg')
 
     USERNAME_FIELD = "username"
     REQUIRED_FIELDS = []
