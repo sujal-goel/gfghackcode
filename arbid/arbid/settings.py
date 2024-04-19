@@ -29,6 +29,14 @@ ALLOWED_HOSTS = []
 
 AUTH_USER_MODEL = 'accounts.customuser'
 # Application definition
+STATIC_ROOT = BASE_DIR / 'accounts'
+
+STATIC_URL = 'static'
+
+#Add this in your settings.py file:
+STATICFILES_DIRS = [
+    BASE_DIR / 'templates'
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',

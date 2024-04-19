@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ArBid - Explore Page</title>
+        {%load static %}
+        <link rel="{% static 'stylesheet'%}" href="explore.css">
+        <script src="{% static 'explore.js'%}" defer></script>
+
+        <link rel="shortcut icon" href="{% static 'assets/logos/favicon.ico'%}" type="image/x-icon">
+</head>
+<body>
+    <div class="sticky-search">
+        <a href="index.html"><img src="{% static 'assets/logos/logo-black.png'%}" alt=""></a>
+        <input type="text" id="searchInput" placeholder="Search images...">
+    </div>
+
+    <div class="image-gallery" id="imageGallery">
+      
+    </div>
+
+</body>
+</html>

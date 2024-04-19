@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArBid - A Visual Art Gallery</title>
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="shortcut icon" href="{% static 'assets/logos/favicon.ico' %}" type="image/x-icon">
+    <script src="{% static 'app.js' %}" defer></script>
+</head>
+
+<body>
+    <section class="mainSection">
+        <div class="darkOverlay"></div>
+        <div class="mainHomeBody">
+            <nav class="nav">
+                <a href="index.html"><img class="logo" src="{% static 'assets/logos/logo-white.png' %}" alt="" width="80px"></a>
+                <div class="navTags">
+                    <a href="explore" class="navigators">Explore</a>
+                    <a href="#" class="navigators">Community</a>
+                    <a href="#" class="navigators">Upload</a>
+                    <a href="#" class="navigators">Contact Us!</a>
+                </div>
+                
+                <a href="{% url 'signup' %}"><button class="join joinFORJS">Join</button></a>
+                <a href="{% url 'login_view' %}" class="navigators login">login</a>
+                <img src="{% static 'assets/modes/light_mode_FILL0_wght400_GRAD0_opsz48.svg' %}" alt="" class="themeMode">
+                <img src="{% static 'assets/logos/harmburger.svg' %}" alt="" class="hamburger sidebarbtns" onclick="openSideBar()">
+            </nav>
+            <div class="homeContent">
+              
+                <h1 class="homeContentHeading">The right photo for every moment.</h1>
+                <p class="homeContentPara">Surf categories of professional photos to express your ideas and connect with your audience</p>
+                <div class="searchFamily">
+                    <input type="search" class="searchInputImg searchInputVid" id="searchInput">
+                    <label for="searchInput" class="searchInput">Search for images</label>
+                </div>
+                <p class="trending">Trending: </p>
+            </div>
+        </div>
+    </section>
+    <div class="sideBar">
+        <div class="sideBarContent">
+            <img src="{% static 'assets/logos/close.svg' %} " alt="" width="50" class="close sidebarbtns" onclick="closeSideBar()">
+            <a href="explore" class="navigators ">Explore</a>
+            <a href="#" class="navigators">Community</a>
+            <a href="#" class="navigators">Upload</a>
+            <a href="#" class="navigators">Contact Us!</a>
+            <a href="#" class="navigators sidebarJoin joinFORJS">Join</a>
+            <img width="50px" src="{% static 'assets/modes/light_mode_FILL0_wght400_GRAD0_opsz48.svg' %} " alt="" class="themeMode">
+        </div>
+    </div> <!-- Close the .sideBar div properly -->
+    
+    <div class="seperationHeading">
+        <hr>
+        <h1 class="heading">Latest Images</h1>
+        <hr>
+    </div>
+
+    <section class="imgGrid">
+        <div class="imgcols imagescol1">
+            <div class="images"><img src="https://images.unsplash.com/photo-1548172639-78b9a845fccb?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' " alt=""></div>
+            <div class="images"><img src="https://images.unsplash.com/photo-1550438496-8c6e269e7886?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'" alt=""></div>
+        </div>
+
+        <div class="imgcols imagescol2">
+            <div class="images"><img src="https://images.unsplash.com/photo-1550438496-8c6e269e7886?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div> 
+            <div class="images"><img src="https://images.unsplash.com/photo-1540386473924-84032e5592f1?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+        </div>
+
+        <div class="imgcols imagescol3">
+            <div class="images"><img src="https://images.unsplash.com/photo-1540386473924-84032e5592f1?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+            <div class="images"><img src="https://images.unsplash.com/photo-1548172639-78b9a845fccb?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 ArBid - An Art Gallery</p>
+            <div class="social-icons">
+                <a href="#"><img src="{% static 'assets/logos/facebook.svg' %} " alt="Facebook"></a>
+                <a href="#"><img src="{% static 'assets/logos/twitter.svg' %} " alt="Twitter"></a>
+                <a href="#"><img src="{% static 'assets/logos/instagram.svg' %} " alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

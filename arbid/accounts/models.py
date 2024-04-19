@@ -4,7 +4,7 @@ from django.contrib.auth.models import AbstractUser
 
 class customuser(AbstractUser):
     username=models.CharField(max_length=30,unique=True)
-    phone=models.CharField(max_length=100,unique=True)
+    phone=models.CharField(max_length=100,default="",blank=True)
     user_type= models.CharField(max_length=30)
     user_bio=models.CharField(max_length=200)
     user_profile_image=models.ImageField(upload_to="profile")
