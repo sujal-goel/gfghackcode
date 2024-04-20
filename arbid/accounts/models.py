@@ -7,13 +7,13 @@ class customuser(AbstractUser):
     c1=(("m","Male"),("f","female"))
     username=models.CharField(max_length=30,unique=True)
     name=models.CharField(max_length=100,default="")
-    age=models.IntegerField(default=0)
+    age=models.IntegerField(default=0,blank=True)
     occupation=models.CharField(max_length=100,default="")
-    gender=models.CharField(max_length=10,choices=c1,default="m")
+    gender=models.CharField(max_length=10,choices=c1,default="m",blank=True)
     phone=models.CharField(max_length=100,default="",blank=True)
     user_type= models.CharField(max_length=30,choices=c,default="",blank=True)
     user_bio=models.CharField(max_length=200,default="",blank=True)
-    user_profile_image=models.ImageField(upload_to='static/user_images', default='static/user_images/person.svg')
+    user_profile_image=models.ImageField(upload_to='static/user_images', default='static/user_images/person.svg',blank=True)
 
     def __str__(self):
         return self.username

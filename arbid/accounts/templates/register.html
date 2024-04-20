@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us - Create Your Account</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'register.css' %}">
+    <script src="{% static 'register.js' %}" defer></script>
+    <link rel="shortcut icon" href="{% static 'assets/logos/favicon.ico' %}" type="image/x-icon">
+</head>
+<body>  
+    <div class="nav">
+        <a href="{% url '' %}"><img class="logo" src="{% static 'assets/logos/logo-white.png' %}" alt="" width="80px"></a>
+    </div>
+    <section class="registrationInfo">
+        <div class="registerCards">
+            <div class="cards card-1" onclick="cardTransitions(this)">
+                <div class="cardInfoImg"></div>
+                <span class="cardHeading">Join us as a user?</span>
+                <ul class="perks">
+                    <li>You get access to free images.</li>
+                    <li>You can buy your favourite images.</li>
+                    <li>Connect with other artists and users.</li>
+                </ul>
+                <button class="continueBtn userReg" onclick="toRegistrationPage(this)">Continue</button>
+            </div>
+            <div class="loginComponent">
+                <div class="cards card-2" onclick="cardTransitions(this)">
+                    <div class="cardInfoImg"></div>
+                    <span class="cardHeading">Join us as a artist?</span>
+                    <ul class="perks">
+                        <li>You get to upload your artwork.</li>
+                        <li>You can sell and bid on your artworks.</li>
+                        <li>Collaborate with other artists and users.</li>
+                    </ul>
+                    <button class="continueBtn artistReg" onclick="toRegistrationPage(this)" type="submit">Continue</button>
+                </div>
+                <a href="{% url 'login_view' %}" class="loginPrompt">Already Have An Account ? <span>Login</span></a>
+            </div>
+       
+            <div class="cards card-3" onclick="cardTransitions(this)">
+                <div class="cardInfoImg"></div>
+                <span class="cardHeading">Join us as a organization?</span>
+                <ul class="perks">
+                    <li>Competitive salary: Attracting top talent.</li>
+                    <li>Flexible work arrangements: Work-life balance.</li>
+                    <li>Professional development opportunities: Continuous growth.</li>
+                </ul>
+                <button class="continueBtn organizationReg" onclick="toRegistrationPage(this)">Continue</button>
+            </div>
+        </div>  
+    </section>
+</body>
+</html>

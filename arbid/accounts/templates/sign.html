@@ -71,13 +71,13 @@ span.psw {
 </style>
 </head>
 <body>
-
+{%load static %}
 <h2>Register Form</h2>
 <div class="form">
 <form action="{%url 'signup' %}" method="POST">
   {% csrf_token %}
   <div class="imgcontainer">
-    <img src="./images/img_avatar2.png" alt="Avatar" class="avatar">
+    <img src="{%static 'assets/person.svg'%}" alt="Avatar" class="avatar">
   </div>
 
   <div class="container">

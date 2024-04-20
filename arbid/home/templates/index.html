@@ -19,26 +19,28 @@
                 <a href="index.html"><img class="logo" src="{% static 'assets/logos/logo-white.png' %}" alt="" width="80px"></a>
                 <div class="navTags">
                     <a href="explore" class="navigators">Explore</a>
-                    <a href="#" class="navigators">Community</a>
-                    <a href="#" class="navigators">Upload</a>
-                    <a href="#" class="navigators">Contact Us!</a>
+                    <a href="community" class="navigators">Community</a>
+                    
                 </div>
-                
-                <a href="{% url 'signup' %}"><button class="join joinFORJS">Join</button></a>
-                <a href="{% url 'login_view' %}" class="navigators login">login</a>
-                <img src="{% static 'assets/modes/light_mode_FILL0_wght400_GRAD0_opsz48.svg' %}" alt="" class="themeMode">
+                <div class="signOpts">
+
+                    <a href="{% url 'signup' %}"><button class="join joinFORJS">Join</button></a>
+                    <a href="{% url 'login_view' %}" class="navigators login">Login</a>
+
+                </div>
+                <!-- <img src="{% static 'assets/modes/light_mode_FILL0_wght400_GRAD0_opsz48.svg' %}" alt="" class="themeMode"> -->
                 <img src="{% static 'assets/logos/harmburger.svg' %}" alt="" class="hamburger sidebarbtns" onclick="openSideBar()">
+                
                 <img src="{% static 'assets/person.svg'%}"  alt="Profile Icon" class="profile-icon" onclick="toggleDiv('profile-logo')">
                 <div class="profile-logo" id ="profile-logo">
                     <div class="profile-info">
-                        <p>Welcome, <span id="username" value="">Name</span></p>
+                        <p>Welcome, <span id="username" value="">user</span></p>
                         <button id="logout-btn">Logout</button>
-                        <button id="logout-btn">settings</button>
+                        <a href="{%url 'profile_setting'%}"><button id="logout-btn">settings</button></a>
 
                     </div>
 
                 </div>
-                
             </nav>
             <div class="homeContent">
               
@@ -57,35 +59,50 @@
             <img src="{% static 'assets/logos/close.svg' %} " alt="" width="50" class="close sidebarbtns" onclick="closeSideBar()">
             <a href="explore" class="navigators ">Explore</a>
             <a href="#" class="navigators">Community</a>
-            <a href="#" class="navigators">Upload</a>
-            <a href="#" class="navigators">Contact Us!</a>
+            
             <a href="#" class="navigators sidebarJoin joinFORJS">Join</a>
             <img width="50px" src="{% static 'assets/modes/light_mode_FILL0_wght400_GRAD0_opsz48.svg' %} " alt="" class="themeMode">
+            <img src="{% static 'assets/person.svg'%}"  alt="Profile Icon" class="profile-icon" onclick="toggleDiv('profile-logo')">
+                <div class="profile-logo" id ="profile-logo">
+                    <div class="profile-info">
+                        <p>Welcome, <span id="username" value="">Name</span></p>
+                        <button id="logout-btn">Logout</button>
+                        <button id="logout-btn">settings</button>
+
+                    </div>
+
         </div>
     </div> <!-- Close the .sideBar div properly -->
-    
+    </div>
     <div class="seperationHeading">
         <hr>
-        <h1 class="heading">Latest Images</h1>
+        <h1 class="heading">Explore the Arts</h1>
         <hr>
     </div>
 
     <section class="imgGrid">
         <div class="imgcols imagescol1">
             <div class="images"><img src="https://images.unsplash.com/photo-1548172639-78b9a845fccb?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' " alt=""></div>
-            <div class="images"><img src="https://images.unsplash.com/photo-1550438496-8c6e269e7886?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'" alt=""></div>
+            <div class="images"><img src="https://images.unsplash.com/photo-1707029480862-ca9a6a4fd55d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+            <div class="images"><img src="https://images.unsplash.com/photo-1540386473924-84032e5592f1?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+
         </div>
 
         <div class="imgcols imagescol2">
-            <div class="images"><img src="https://images.unsplash.com/photo-1550438496-8c6e269e7886?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div> 
+            <div class="images"><img src="https://images.unsplash.com/photo-1707029480862-ca9a6a4fd55d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
             <div class="images"><img src="https://images.unsplash.com/photo-1540386473924-84032e5592f1?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+            <div class="images"><img src="https://images.unsplash.com/photo-1710971228630-f59c4cb257a8?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
         </div>
 
         <div class="imgcols imagescol3">
-            <div class="images"><img src="https://images.unsplash.com/photo-1540386473924-84032e5592f1?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
-            <div class="images"><img src="https://images.unsplash.com/photo-1548172639-78b9a845fccb?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+
+            <div class="images"><img src="https://images.unsplash.com/photo-1711843250852-54e4781ad1b8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0N3x8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+            <div class="images"><img src="https://images.unsplash.com/photo-1548172639-78b9a845fccb?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' " alt=""></div>
+            <div class="images"><img src="https://images.unsplash.com/photo-1707080213273-5a5112431d94?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' " alt=""></div>
+
         </div>
     </section>
+    
     <footer class="footer">
         <div class="footer-content">
             <p>&copy; 2024 ArBid - An Art Gallery</p>

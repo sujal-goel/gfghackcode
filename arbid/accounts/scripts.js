@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('form');
-    const emailInput = document.querySelector('input[type="email"]');
+    const userinput = document.querySelector('input[type="text"]');
     const passwordInput = document.querySelector('input[type="password"]');
     const rememberCheckbox = document.querySelector('input[type="checkbox"]');
     const loginBox = document.querySelector('.login-box');
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        const email = emailInput.value;
+        const email = userinput.value;
         const password = passwordInput.value;
         const rememberMe = rememberCheckbox.checked;
 
@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Reset the form
         form.reset();
+        window.location.href="/"
     });
 
     function displayMessage(message) {
@@ -33,8 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Create a new message box
         const messageBox = document.createElement('div');
+
         messageBox.className = 'message-box';
+        messageBox.style.height='auto';
+        messageBox.style.width='auto';
+        messageBox.style.padding='2em';
+        messageBox.style.backgroundColor='rgba(255, 255, 0, 0.822)';
+
         messageBox.textContent = message;
+        messageBox.style.position="absolute"
 
         // Append message box to the login box
         loginBox.appendChild(messageBox);

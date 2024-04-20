@@ -7,6 +7,7 @@ User = get_user_model()
 def signup(request):
     if request.method == 'POST':
         uname = request.POST.get('uname')
+        name = request.POST.get('name')
         phone = request.POST.get('phone')
         email = request.POST.get('email')
         user_type = request.POST.get('type')
@@ -19,6 +20,7 @@ def signup(request):
             my_user = User.objects.create_user(username=uname, email=email, password=pass1)
 
             my_user.phone = phone
+            my_user.name = phone
             my_user.user_type = user_type
             my_user.save()
 
@@ -31,17 +33,14 @@ def login_view(request):
         uname = request.POST.get('uname')
         pass1 = request.POST.get('psw')
         user = authenticate(request, username=uname, password=pass1)
+        print(user)
         if user is not None:
             login(request, user)
-            if user.is_superuser:
-                return HttpResponseRedirect("/admin")
-            if user.is_staff:
-                return HttpResponseRedirect("/seller_dashboard")
-            # if user.is_active:
-            #     return HttpResponseRedirect("/custom_dashboard")
-            else:
-                return redirect('home')
+            return redirect('home')
         else:
             return HttpResponse("Your password and confirm password mismatched")
             
     return render(request, 'login.html')
+
+def profile_settings(request):
+    return render(request,"setting.html")

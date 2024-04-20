@@ -7,6 +7,10 @@ User = get_user_model()
 # Create your views here.
 def home(request):
     images=image.objects.all()
-    return render(request,"index.html",{"images":images})
+    return render(request,"index.html",{"images":images,"value":1})
 def explore(request):
-    return render(request,"explore.html")
+    images=image.objects.all()
+
+    return render(request,"explore.html",{"images":images})
+def community(request):
+    return render(request,"community.html")

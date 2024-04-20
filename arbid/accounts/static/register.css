@@ -1,0 +1,199 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* --------------------- */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --text-color: rgb(255, 255, 255);
+    --nav-color: rgb(0, 0, 0);
+    --QuickSand: "Quicksand", sans-serif; 
+    --Poppins: "Poppins", sans-serif;
+     --Balo: "Baloo Bhai 2", sans-serif;
+    --darkmode:  rgb(0, 0, 0);
+    --lightmode: rgb(255, 255, 255);
+}
+*{
+
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--nav-color) ;
+    font-family: var(--QuickSand);
+    overflow-x: hidden;
+}
+.logo{
+    cursor: pointer;
+}
+.nav{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom:2em ; */
+}
+
+.registrationInfo{
+    width: 100%;
+    min-height: 90%;
+}
+.registerCards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+
+.cards{
+    border-radius: 2em;
+    min-width: 30%;
+    min-height: 500px;
+    background-color: #f0f0f0;
+    font-family: var(--Balo);
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.7);
+}
+.loginComponent{
+    border-radius: 2em;
+    min-width: 30%;
+    min-height: 500px;
+    text-align: center;
+    font-family: var(--Balo);
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.cards:nth-child(2),.loginComponent{
+    min-height: 550px;
+}
+.loginPrompt{
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+.loginPrompt span{
+    text-decoration: underline;
+
+}
+
+.card-1 .cardInfoImg{
+    width: 100%;
+    height: 180px;
+    background-image: url(https://media.istockphoto.com/id/1318428430/photo/man-is-an-artist-holding-a-brush-and-drawing-an-abstract-picture.jpg?s=612x612&w=0&k=20&c=2r7icCBGSHgrVjxdxaQJKA4v-V8_VJxx37YEHleb2e0=);
+    background-position: center 0;
+    background-size: cover;
+    border-radius: 0.5em;
+}
+
+.card-2 .cardInfoImg{
+    width: 100%;
+    height: 220px;
+    background-image: url(https://t4.ftcdn.net/jpg/00/88/53/89/360_F_88538986_5Bi4eJ667pocsO3BIlbN4fHKz8yUFSuA.jpg);
+    background-position: center center;
+    background-size: cover;
+    border-radius: 0.5em;
+    
+}
+.cardBlur{
+    filter: blur(16px);
+}
+.card-3 .cardInfoImg{
+    width: 100%;
+    height: 180px;
+    background-image: url(https://t3.ftcdn.net/jpg/02/74/19/22/240_F_274192221_atKEwMPblJge9Wek9r7JrJo4B9kvyy3P.jpg);
+    background-position: center 0;
+    background-size: cover;
+    border-radius: 0.5em;
+}
+.cards .cardHeading{
+    font-weight: 600;
+    font-size: 1.5em;
+    display: inline-block;
+    margin: 1em;
+    text-transform: capitalize;
+}
+
+.cards .perks{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-wrap: wr;
+    margin:auto;
+    width: 75%;
+    font-weight: 500;
+}
+
+.continueBtn{
+    margin-top: 4em;
+    padding:1em 4em;
+    border-radius: 3rem;
+    outline: none;
+    background-color: #457b9d;
+    color: white;
+    font-weight: 700;
+    font-family: var(--Balo);
+    border: 3px solid black;
+    cursor: pointer;
+}
+
+@media (max-width:750px){
+    .registerCards{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .cards{
+        width: 65vw;
+    }
+    
+}

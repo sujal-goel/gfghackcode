@@ -106,6 +106,11 @@ h2 {
 .remember-forgot a:hover {
     text-decoration: underline;
 }
+.messageBox{
+    width:auto;
+    height:40px;
+    background-color: rgba(128, 255, 0, 0.822);
+}
 
 button {
     width: 100%;

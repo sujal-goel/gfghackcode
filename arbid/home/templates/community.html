@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Forum</title>
+    {%load static%}
+    <link rel="shortcut icon" href="{%static 'assets/logos/favicon.ico'%}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'community.css'%}">
+</head>
+<body>
+    <div class="container">  
+        <h1>Community Forum</h1>
+        <div class="form-group">
+            <label for="comment">Comment:</label>
+            <textarea id="comment" rows="4" cols="50" placeholder="Enter your comment"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="tags">Tags:</label>
+            <input type="text" id="tags" placeholder="Enter tags (comma separated)">
+        </div>
+        <button id="createBtn">Create</button>
+        <div id="commentArea"></div>
+    </div>
+
+    <script src="{% static 'community.js'%}"></script>
+</body>
+</html>
