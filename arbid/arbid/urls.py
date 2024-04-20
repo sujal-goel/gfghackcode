@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path
 from home.views import *
 from accounts.views import *
+from django.conf import settings
+from django.conf.urls.static import static
 urlpatterns = [
     path('',home,name="home"),
     path('admin/', admin.site.urls),
@@ -25,4 +27,4 @@ urlpatterns = [
     path('login_view/',login_view,name="login_view"),
     path('explore/',explore,name="explore")
 
-]
+]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

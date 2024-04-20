@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-r77faoyb)pri=(lh%c!@)js8c+a9c89@_8wg0=k6ush-s3kk!#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["128.128.117.192"]
 
 AUTH_USER_MODEL = 'accounts.customuser'
 # Application definition
@@ -118,10 +119,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_ROOT = BASE_DIR / 'accounts'
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS=[
+    'static'
+]
 
+MEDIA_URL ="accounts/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR,"accounts/media")
 #Add this in your settings.py file:
 # STATICFILES_DIRS = [
 #     BASE_DIR / 'templates'
